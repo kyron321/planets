@@ -33,7 +33,7 @@ You do not need to worry about the styling right now, just ensure you are able _
 
 NASA are fickle over their definition of a planet, so we should not assume that we will always have same number of planets. The planet data may update, where can we store it in our app to ensure those changes update our components?
 
-**Further Task**
+**Optional Further Task**
 
 3.  Think about how you might choose to represent the data. Presenting information to a user as `label:value` like depicted in the wireframe is not very inspiring. Think about how you present the data for each planet with the card. This [article](https://www.refactoringui.com/previews/labels-are-a-last-resort) is a very good read on how to refactor the UI.
 
