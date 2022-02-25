@@ -1,10 +1,10 @@
-# React Project Reresher
+# React Project Refresher
 
 Your task is to build an app which lists information on the planets in our solar system.🪐
 
 ## Pre lecture Tasks:
 
-1. Use the following wireframe to plan your app. Consider what components you'll want to build. Where might be want to house this state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a resuable component.
+1. Use the following wireframe to plan your app. Consider what components you'll want to build. Where might be want to house this state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a reusable component.
 
 <img src="wireframe.jpg" alt="react app wireframe" style="width:300px;"/>
 
