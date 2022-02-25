@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# React Project Reresher
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Your task is to build an app which lists information on the planets in our solar system.🪐
 
-## Available Scripts
+## Tasks:
 
-In the project directory, you can run:
+1. Use the following wireframe to plan your app. Consider what components you'll want to build. Where might be want to house this state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a resuable component.
 
-### `npm start`
+<img src="wireframe.jpg" alt="react app wireframe" style="width:300px;"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Using your plan, build up your individual components. You can use the following fake data to populate your app.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```js
+[
+  {
+    planet_id: 1,
+    planet_name: "planet a",
+    au_from_sun: "1",
+    type: "gas",
+    moon_count: "0",
+  },
+  {
+    planet_id: 2,
+    planet_name: "planet b",
+    au_from_sun: "2",
+    type: "rock",
+    moon_count: "4",
+  },
+];
+```
 
-### `npm test`
+You do not need to worry about the styling right now, just ensure you are able _hydrate_ your components with the data provided.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+NASA are fickle over their definition of a planet, so we should not assume that we will always have same number of planets. The planet data may update, where can we store it in our app to ensure those changes update our components?
 
-### `npm run build`
+**Further Task**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3.  Think about how you might choose to represent the data. Presenting information to a user as `label:value` like depicted in the wireframe is not very inspiring. Think about how you present the data for each planet with the card. This [article](https://www.refactoringui.com/previews/labels-are-a-last-resort) is a very good read on how to refactor the UI.
