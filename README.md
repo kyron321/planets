@@ -41,7 +41,7 @@ NASA are fickle over their definition of a planet, so we should not assume that 
 
 1. Time to remove your hard coded data! We want to fetch the most up to date planets every time we load open the app. Make use of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to request this data and update state with the up to date planets.
 
-_What value(s) wil need to exist in the dependency array? Why?_
+_What value(s) will need to exist in the dependency array? Why?_
 
 2. Data fetches may take some time! Make use of the the is loading pattern to let the user know that something is happening whilst they await for the data.
 
