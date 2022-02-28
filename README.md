@@ -4,11 +4,11 @@ Your task is to build an app which lists information on the planets in our solar
 
 ## Pre lecture Tasks:
 
-1. Use the following wireframe to plan your app. Consider what components you'll want to build. Where might be want to house this state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a reusable component.
+1. Use the following wireframe to plan your app. Consider what we should break this app into. Eventually the planet data will update. Consider where we'd want to hold state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a reusable components.
 
 <img src="wireframe.jpg" alt="react app wireframe" style="width:300px;"/>
 
-2. Using your plan, build up your individual components. You can use the following fake data to populate your app.
+2. Using your plan, build up your individual components. You can use the following fake data to initialise your state. Don't worry about updating it just yet.
 
 ```js
 [
@@ -29,13 +29,12 @@ Your task is to build an app which lists information on the planets in our solar
 ];
 ```
 
-You do not need to worry about the styling right now, just ensure you are able _hydrate_ your components with the data provided.
+You do not need to consider CSS right now, just ensure you are able _hydrate_ your components with the data provided.
 
-NASA are fickle over their definition of a planet, so we should not assume that we will always have same number of planets. The planet data may update, where can we store it in our app to ensure those changes update our components?
 
 **Optional Further Task**
 
-3.  Think about how you might choose to represent the data. Presenting information to a user as `label:value` like depicted in the wireframe is not very inspiring. Think about how you present the data for each planet with the card. This [article](https://www.refactoringui.com/previews/labels-are-a-last-resort) is a very good read on how to refactor the UI.
+3.  Think about how you might choose to present the data. Presenting information to a user as `label:value` like depicted in the wireframe is not very inspiring. Think about how you present the data for each planet with the card. This [article](https://www.refactoringui.com/previews/labels-are-a-last-resort) is a very good read on how to refactor the UI. You can consider using CSS here.
 
 ## Post Lecture Tasks
 
@@ -43,6 +42,6 @@ NASA are fickle over their definition of a planet, so we should not assume that 
 
 _What value(s) will need to exist in the dependency array? Why?_
 
-2. Data fetches may take some time! Make use of the the is loading pattern to let the user know that something is happening whilst they await for the data.
+2. Data fetches may take some time. Make use of the the is loading pattern to let the user know that something is happening whilst they wait for the data.
 
 3. Data fetches are common in applications. There's a danger that the logic will bloat our components and maybe be useable elsewhere. Extract out the data fetch logic to a separate file to tidy up our project a bit.
