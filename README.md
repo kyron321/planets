@@ -4,7 +4,7 @@ Your task is to build an app which lists information on the planets in our solar
 
 ## Pre lecture Tasks:
 
-1. Use the following wireframe to plan your app. Consider what we should break this app into. Eventually the planet data will update. Consider where we'd want to hold state. Sketch out a component tree diagram to help illustrate your decisions. Think of where we could make of a reusable components.
+1. Use the following wireframe to plan your app. Consider the different components this app would be made of; think of which we could make reusable. Eventually the planet data will update so we'll probably want to hold it in state. Sketch out a component tree diagram to help illustrate your decisions.  
 
 <img src="wireframe.jpg" alt="react app wireframe" style="width:300px;"/>
 
