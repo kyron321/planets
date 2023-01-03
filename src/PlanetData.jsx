@@ -1,37 +1,34 @@
-import Planet from "./Planet";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function PlanetData() {
-  const [data, setData] = useState([
-    {
-      planet_id: 1,
-      planet_name: "planet a",
-      au_from_sun: "1",
-      type: "gas",
-      moon_count: "0",
-    },
-    {
-      planet_id: 2,
-      planet_name: "planet b",
-      au_from_sun: "2",
-      type: "rock",
-      moon_count: "4",
-    },
-  ]);
-  const planets = [];
+  const [planets, setPlanets] = useState([]);
 
-  data.forEach((planet) => {
-    planets.push(
-      <Planet
-        key={planet.planet_id}
-        planet_name={planet.planet_name}
-        type={planet.type}
-        au_from_sun={planet.au_from_sun}
-      />
+  useEffect(() => {
+    fetch(`https://space-facts.herokuapp.com/api/planets`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPlanets(data.planets);
+      });
+  }, []);
+
+  return (
+    <>
+      
+      <div className="planet-data">
+      {planets.map((planet)=>(
+        <div className="data-box">
+          <h2 className="header-text" key={planet.planet_id}>{planet.planet_name}</h2>
+          <h3 key={planet.planet_id}>Distance from the sun {planet.au_from_sun}</h3>
+          <h3 key={planet.planet_id}>Planet type {planet.type}</h3>
+          <h3 key={planet.planet_id}>Moon Count {planet.moon_count}</h3>
+        </div>
+
+        
+        ))}
+        </div>
+        </>
     );
-  });
-
-  return <div>{planets}</div>;
-}
-
+  }
+  
+  
 export default PlanetData;
